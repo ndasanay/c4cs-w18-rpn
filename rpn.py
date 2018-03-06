@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-import operator operators = {
+import operator
+
+operators = {
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul,
     '/': operator.truediv,
 }
+
 def calculate(myarg):
     stack = list()
     for token in myarg.split():
@@ -20,8 +23,12 @@ def calculate(myarg):
         print(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
-    return stack.pop() def main():
+    return stack.pop() 
+
+def main():
     while True:
         result = calculate(input("rpn calc> "))
-        print("Result: ", result) if __name__ == '__main__':
+        print("Result: ", result) 
+
+if __name__ == '__main__':
     main()
